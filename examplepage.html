@@ -5,21 +5,22 @@
     <title>ColorFlow</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="static/img/favicon.png">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
     <script src="js/colorFlow.js"></script>
-    <style>html{overflow:hidden}span:hover{text-shadow:0px 0px 1px rgba(0,0,0,0.35)}</style>
+    <style>span:hover{text-shadow:0px 0px 1px rgba(0,0,0,0.35)}#codepin{position:absolute;left:50%}pre{position:absolute;left:-283px}h1{font-size:70px;font-family:'Open Sans';text-shadow:0px 1px 1px rgba(0,0,0,0.45)}</style>
+    <style>@media(min-width:1920px){pre{font-size:22px!important;left:-461px!important}h1{font-size:135px!important}span{font-size:29px!important}}@media(min-width:1280px){pre{font-size:17px;left:-355px}h1{font-size:95px}span{font-size:20px}}@media(max-width:570px){pre{font-size:10px;left:-213px}h1{font-size:55px}}@media(max-width:400px){pre{font-size:7px;left:-150px;}h1{font-size:55px}}</style>
 </head>
 
 <body>
 
   <div style="text-align:center">
-    <h1 style="font-size:70px;font-family:'Open Sans';text-shadow:0px 1px 1px rgba(0,0,0,0.45)">ColorFlow</h1>
-    <p style="margin-top:-20px"><span style="cursor:pointer" onclick="link()">Less than 1kB<br>View on GitHub</span></p>
+    <h1>ColorFlow</h1>
+    <p style="margin-top:-20px"><span style="cursor:pointer" onclick="link()">Less than 1 kB<br>View on GitHub</span></p>
   </div>
 
-  <div style="position:absolute;left:50%">
-  <pre style="position:absolute;left:-283px;width:568px">
+  <div id="codepin">
+  <pre>
       <code>
 &lt;script&gt;
     $('body').colorFlow({
