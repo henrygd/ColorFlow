@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ColorFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static/img/favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+    <script src="js/colorFlow.js"></script>
+    <style>html{overflow:hidden}span:hover{text-shadow:0px 0px 1px rgba(0,0,0,0.35)}</style>
+</head>
+
+<body>
+
+  <div style="text-align:center">
+    <h1 style="font-size:70px;font-family:'Open Sans';text-shadow:0px 1px 1px rgba(0,0,0,0.45)">ColorFlow</h1>
+    <p style="margin-top:-20px"><span style="cursor:pointer" onclick="link()">Less than 1kB<br>View on GitHub</span></p>
+  </div>
+
+  <div style="position:absolute;left:50%">
+  <pre style="position:absolute;left:-283px;width:568px">
+      <code>
+&lt;script&gt;
+    $('body').colorFlow({
+        background:['#85144b','#F012BE','#FFBC00','#7FDBFF','#01FF70'],
+        text:['#CF5D94','#EFA9FA','#665800','#004966','#00662C'],
+        time:25
+    });
+&lt;/script&gt;
+      </code>
+  </pre>
+  </div>
+
+  <script>
+      $('body').colorFlow({
+          background: ['#85144b', '#F012BE', '#FFBC00', '#7FDBFF', '#01FF70'],
+          text: ['#CF5D94', '#EFA9FA', '#665800', '#004966', '#00662C'],
+          time: 25
+      });
+  </script>
+
+  <script>
+    function link(){
+        window.location.assign("https://github.com/henrygd/ColorFlow")
+    }
+  </script>
+  
+</body>
+</html>
