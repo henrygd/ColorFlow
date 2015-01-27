@@ -1,22 +1,2 @@
 //  ColorFlow | MIT license | henrygd.me
-$.fn.colorFlow = function(e) {
-    var t = e.background,
-        a = e.text,
-        l = e.time,
-        n = [];
-    if(void 0 != t && void 0 != a)
-        if(t.length > a.length) var o = t.length;
-        else var o = a.length;
-    else if(void 0 != t) var o = t.length;
-    else var o = a.length;
-    var r = 100 / o,
-        f = 100 / o;
-    if(void 0 != t)
-        for(i = 0; o > i; i++) n[i] = "background:" + e.background[i] + ";";
-    if(void 0 != a)
-        for(i = 0; i < a.length; i++) void 0 != n[i] ? n[i] += "color:" + e.text[i] : n[i] = "color:" + e.text[i];
-    var s = "keyframes pulsate{0%{" + n[0] + "}";
-    for(i = 1; o > i; i++) s += Math.floor(r) + "%{" + n[i] + "}", r += f;
-    $("head").append("<style>@-webkit-" + s + "100%{" + n[0] + "}}@" + s + "100%{" + n[0] + "}}.colorflow{-webkit-animation:pulsate " + l + "s linear infinite;animation:pulsate " + l + "s linear infinite}</style>")
-    $(this).addClass("colorflow")
-};
+$.fn.colorFlow=function(o){var e=o.background,t=o.text,a=o.time,n=[],l=Math.random().toString(36).replace(/[^a-z]+/g,"");if(void 0!=e&&void 0!=t)if(e.length>t.length)var r=e.length;else var r=t.length;else if(void 0!=e)var r=e.length;else var r=t.length;var f=100/r,d=100/r;if(void 0!=e)for(i=0;r>i;i++)n[i]="background:"+o.background[i]+";";if(void 0!=t)for(i=0;i<t.length;i++)void 0!=n[i]?n[i]+="color:"+o.text[i]:n[i]="color:"+o.text[i];var v="keyframes "+l+"{0%{"+n[0]+"}";for(i=1;r>i;i++)v+=Math.floor(f)+"%{"+n[i]+"}",f+=d;$("head").append("<style>@-webkit-"+v+"100%{"+n[0]+"}}@"+v+"100%{"+n[0]+"}}.colorflow-"+l+"{-webkit-animation:"+l+" "+a+"s linear infinite;animation:"+l+" "+a+"s linear infinite}</style>"),$(this).addClass("colorflow-"+l)};
