@@ -34,3 +34,7 @@ $("body").colorFlow("destroy");
 This will remove all instances of ColorFlow on an element, reverting it to its default color state.
 
 Go crazy (responsibly)!
+
+### Note on compatibility
+
+Should work on all browsers that support CSS3 animation (pretty much everything except IE 9 and below).
