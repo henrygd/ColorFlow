@@ -26,7 +26,7 @@ The effect is CSS-based and colors can be provided in hex, rgb, or hsl. They wil
 
 Time and at least one of background or text is required.
 
-### Optionally, get rid ColorFlow
+### Optionally, get rid of ColorFlow
 
 ```javascript
 $("body").colorFlow("destroy");
