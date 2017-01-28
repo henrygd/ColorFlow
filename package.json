@@ -1,0 +1,22 @@
+{
+  "name": "colorflow",
+  "version": "1.0.0",
+  "description": "Tiny script smoothly cycles between many background and/or text colors on any element",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henrygd/ColorFlow"
+  },
+  "author": "Henry Dollman <hank@henrygd.me>",
+  "keywords": [
+    "color",
+    "animation"
+  ],
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

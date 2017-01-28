@@ -1,17 +1,29 @@
 # ColorFlow
 
-[Check out an example here](https://henrygd.me/colorflow)
+[Check out an example here](https://henrygd.me/ColorFlow)
 
-Smoothly transition between many background and/or text colors on any element. 1.2 KB. No framework dependencies. Inspired by the header effect at [clrs.cc](http://clrs.cc/).
+Smoothly cycle between many background and/or text colors on any element. Around 550 bytes minified & gzipped with no library / framework dependencies. Inspired by the header effect at [clrs.cc](http://clrs.cc/).
 
-Note: the original 867 byte jQuery plugin is still available -- see `js/colorflow.jquery.js`. Instructions for that are at the bottom.
+Note: the original jQuery plugin is still available ([dist/colorflow.jquery.js](dist/colorflow.jquery.js)). Instructions for that are at the bottom, but there's really no reason to use it at this point.
 
 ## Instructions
 
 ## 1. Load ColorFlow
 
+Install via npm or add a script from the [dist](dist) directory to your page.
+
+```
+npm install colorflow
+```
+
+```javascript
+var ColorFlow = require('colorflow');
+```
+
+Or with a script tag:
+
 ```html
-<script src="js/colorflow.min.js"></script>
+<script src="colorflow.js"></script>
 ```
 
 ## 2. Initialize ColorFlow
@@ -24,9 +36,9 @@ var colorflow1 = new ColorFlow({
     time: 25
 });
 ```
-You may include multiple tags or basic css element selectors - like `'.class'` or `'#id'` - in the `element` array. `time` and at least one of `background` or `text` is also required.
+You may include multiple tags or basic css element selectors -- for example `['.class', '#id', 'div']` --in the `element` array. `time` and at least one of `background` or `text` is also required.
 
-The effect is CSS-based and colors can be provided in hex, rgb, or hsl. They will be displayed in the order provided before looping back to the first color after the specified amount of time (number of seconds). If you use background and text in the same object, the number of colors should be the same.
+The effect is CSS-based and colors can be provided in any regular CSS format. They will be displayed in the order given before looping back to the first color after the specified amount of time (number of seconds). If you use background and text in the same object, the colors of each index are tied together. If one array is shorter, the last color will just take longer to transition into the first as the other finishes.
 
 ## Options
 
@@ -70,10 +82,6 @@ colorflow1.disable();
 ```
 This will remove all colorflow classes from the elements in the element array, reverting them to their default color state. The `colorflow1` object will still exist and the flow method will wake it up. Or simply add the disabled class, still stored in `colorflow1.thisClass`, back to the element.
 
-### Note on compatibility
-
-Should work with all browsers that support CSS3 animation (pretty much everything except IE 9 and below).
-
 
 # jQuery Plugin
 
@@ -99,3 +107,7 @@ $("body").colorFlow({
 ```javascript
 $("body").colorFlow("destroy");
 ```
+
+---
+
+License: MIT
